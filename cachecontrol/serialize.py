@@ -59,7 +59,7 @@ class Serializer(object):
                 ),
                 "status": response.status,
                 "version": response.version,
-                "reason": _b64_encode_str(response.reason),
+                "reason": _b64_encode_str(response.reason or ''),
                 "strict": response.strict,
                 "decode_content": response.decode_content,
             },
